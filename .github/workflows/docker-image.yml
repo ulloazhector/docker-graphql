@@ -28,9 +28,12 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t ulloazhector/docker-graphql:0.0.2 .
+        docker build -t ulloazhector/docker-graphql .
       
     - name: Push Docker image
       run: |
         docker push ulloazhector/docker-graphql:0.0.2
+        docker push ulloazhector/docker-graphql
+        
         
 #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
